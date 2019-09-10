@@ -1,2 +1,4 @@
-.idea
+.idea/*
 data-strucutres-algorithms-java-11.iml
+out
+.idea/workspace.xml
