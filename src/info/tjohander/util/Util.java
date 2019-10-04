@@ -1,4 +1,4 @@
-package info.tjohander;
+package info.tjohander.util;
 
 import static java.lang.Integer.toBinaryString;
 

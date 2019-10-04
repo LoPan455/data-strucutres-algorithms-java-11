@@ -1,6 +1,6 @@
-package info.tjohander;
+package info.tjohander.array;
 
-import java.sql.SQLOutput;
+import info.tjohander.util.Util;
 
 public class Binary {
 

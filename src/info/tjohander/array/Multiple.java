@@ -1,7 +1,10 @@
-package info.tjohander;
+package info.tjohander.array;
 
 import java.util.Arrays;
 
+/**
+ * This class will demo working with two-dimensional arrays
+ */
 public class Multiple {
 
   public static void main(String[] args) {

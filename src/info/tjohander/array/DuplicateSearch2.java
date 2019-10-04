@@ -1,4 +1,4 @@
-package info.tjohander;
+package info.tjohander.array;
 
 import java.util.Arrays;
 

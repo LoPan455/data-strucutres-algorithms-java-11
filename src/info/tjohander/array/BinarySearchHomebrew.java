@@ -1,5 +1,6 @@
-package info.tjohander;
+package info.tjohander.array;
 
+import info.tjohander.util.Util;
 import java.util.Arrays;
 
 public class BinarySearchHomebrew {
