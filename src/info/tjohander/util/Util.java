@@ -13,8 +13,12 @@ public final class Util {
     // To make a whole number, so we need to multiply the random number by some amount to make it greater than zero.
     int multiplier = (int) Math.pow(10, Integer.toString(max).length());
     int[] result = new int[quantity];
-    for (int i = 0; i < quantity - 1 ; i++) {
-      result[i] = (int) Math.floor(Math.random() * multiplier);
+    for (int i = 0; i < quantity;) {
+      int randomNumber = (int) Math.floor(Math.random() * multiplier);
+      if (randomNumber < max && randomNumber != 0) {
+        result[i] = randomNumber;
+        i++;
+      }
     }
     return result;
   }
