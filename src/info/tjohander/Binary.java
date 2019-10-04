@@ -1,5 +1,7 @@
 package info.tjohander;
 
+import java.sql.SQLOutput;
+
 public class Binary {
 
   public static void main(String[] args) {
@@ -8,22 +10,18 @@ public class Binary {
     System.out.println("Searching for " + target + "...");
     int lowest = 0;
     int highest = sortedNumbers.length - 1;
-    int middle = (sortedNumbers.length - 1) / 2;
+    int middleIndex = sortedNumbers.length / 2;
+
     while (lowest <= highest) {
-      if (lowest <= middle) {
-        if (sortedNumbers[middle] < target) {
-          lowest = middle + 1;
-        } else if (sortedNumbers[middle] == target) {
-          System.out.println("Number found at index " + middle);
-          break;
-        } else {
-          highest = middle - 1;
-        }
-        middle = (lowest + highest) / 2;
+      if (target < sortedNumbers[middleIndex]) {
+        highest = middleIndex - 1;
+      } else if (target == sortedNumbers[middleIndex]) {
+        System.out.println("Found " + target +" at index " + middleIndex);
+        break;
+      } else {
+        lowest = middleIndex + 1;
       }
-      if (lowest > highest) {
-        System.out.println("Number not found.");
-      }
+      middleIndex = (highest + lowest) / 2;
     }
   }
 }
